@@ -41,14 +41,62 @@ Content-Type: application/json
 ###
 DELETE {{url-local}}/api/clients/5
 
+
+
+
+
+
+
+
+
+
+
+
 //  Peticiones Hoteles
 
 ###
 GET {{url-local}}/api/hotels
+
+
+
 ###
-GET {{url-local}}/api/trips
+POST {{url-local}}/api/hotels
+Content-Type: application/json
+
+{
+    "nombre": "Melia",
+    "direccion": "Calle Inventada",
+    "ciudad": "Barcelona",
+    "estrellas": 5,
+    "descripcion": "1994-10-13",
+    "tarifa": "70€ noche"
+}
+
+
+
+
+
+###
+PUT {{url-local}}/api/hotels/3
+Content-Type: application/json
+
+{
+    "nombre": "Melia",
+    "direccion": "Calle Inventada",
+    "ciudad": "Segovia",
+    "estrellas": 5,
+    "descripcion": "1994-10-13",
+    "tarifa": "70€ noche"
+}
+
+
+###
+DELETE {{url-local}}/api/hotels/3
 
 
 // Viajes
 
 
+
+###
+GET {{url-local}}/api/trips

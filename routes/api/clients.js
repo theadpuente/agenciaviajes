@@ -16,7 +16,7 @@ router.get('/', async (req, res) => {
 
     }
 
-    //res.send('recoje todos los userss')
+
 });
 
 

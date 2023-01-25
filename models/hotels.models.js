@@ -11,16 +11,16 @@ const getHotelsbyId = (hotelId) => {
 }
 
 
-const createHotel = ({ nombre, apellidos, direccion, telefono, fecha_nacimiento, email, dni }) => {
+const createHotel = ({ nombre, direccion, ciudad, estrellas, descripcion, tarifa }) => {
 
-    return db.query('insert into hoteles (nombre, apellidos, direccion, telefono, fecha_nacimiento, email, dni) values (?, ?, ?, ?, ?, ?, ?)', [nombre, apellidos, direccion, telefono, fecha_nacimiento, email, dni])
+    return db.query('insert into hoteles (nombre, direccion, ciudad, estrellas, descripcion, tarifa) values (?, ?, ?, ?, ?, ?)', [nombre, direccion, ciudad, estrellas, descripcion, tarifa])
 
 };
 
 
-const updateHotelsbyId = (clientId, { nombre, apellidos, direccion, telefono, fecha_nacimiento, email, dni }) => {
+const updateHotelsbyId = (hotelId, { nombre, direccion, ciudad, estrellas, descripcion, tarifa }) => {
 
-    return db.query(' update clientes set nombre = ?, apellidos = ?, direccion = ?, telefono = ?, fecha_nacimiento = ?, email = ?, dni = ? where id = ?', [nombre, apellidos, direccion, telefono, fecha_nacimiento, email, dni, clientId])
+    return db.query(' update hoteles set nombre = ?, direccion = ?, ciudad = ?, estrellas = ?, descripcion = ?, tarifa = ? where id = ? ', [nombre, direccion, ciudad, estrellas, descripcion, tarifa, hotelId])
 
 }
 
