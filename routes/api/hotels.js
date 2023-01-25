@@ -19,11 +19,12 @@ router.get('/', async (req, res) => {
    
 });
 
+
 router.get('/:hotelId', async (req, res) => {
 
 
     try {
-        const [result] = await getHotels();
+        const [result] = await getHotelsbyId();
         res.json(result);
     } catch (error) {
 

@@ -42,16 +42,6 @@ Content-Type: application/json
 DELETE {{url-local}}/api/clients/5
 
 
-
-
-
-
-
-
-
-
-
-
 //  Peticiones Hoteles
 
 ###
@@ -97,6 +87,35 @@ DELETE {{url-local}}/api/hotels/3
 // Viajes
 
 
-
 ###
 GET {{url-local}}/api/trips
+
+
+###
+POST {{url-local}}/api/trips
+Content-Type: application/json
+
+{
+    "fecha_salida": "2023-07-24",
+    "fecha_vuelta": "2023-07-24",
+    "ident_ida": "Y89977L",
+    "ident_vuelta": "O87773L",
+    "hoteles_id": 2
+}
+
+
+###
+PUT {{url-local}}/api/trips/3
+Content-Type: application/json
+
+{
+     "fecha_salida": "2023-07-24",
+    "fecha_vuelta": "2023-07-24",
+    "ident_ida": "Y89977L",
+    "ident_vuelta": "O87773L",
+    "hoteles_id": 1
+}
+
+
+###
+DELETE {{url-local}}/api/trips/3
