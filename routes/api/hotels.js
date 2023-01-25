@@ -2,14 +2,12 @@ const router = require('express').Router();
 
 
 
-
-
 router.get('/', async (req, res) => {
 
 
     try {
-        const result = await db.query('select * from hoteles');
-        res.json(result[0]);
+        const [result] = await db.query('select * from hoteles');
+        res.json(result);
     } catch (error) {
 
         res.json({ fatal: error.message });
@@ -18,6 +16,7 @@ router.get('/', async (req, res) => {
 
     //res.send('recoje todos los userss')
 });
+
 
 
 module.exports = router;

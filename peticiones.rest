@@ -2,6 +2,9 @@
 @port = 3000
 @url-local = {{hostname}}:{{port}}
 
+// Peticiones Clientes 
+
+
 
 ### 
 GET {{url-local}}/api/clients
@@ -38,7 +41,7 @@ Content-Type: application/json
 ###
 DELETE {{url-local}}/api/clients/5
 
-// Hoteles
+//  Peticiones Hoteles
 
 ###
 GET {{url-local}}/api/hotels

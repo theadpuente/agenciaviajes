@@ -2,8 +2,6 @@ const router = require('express').Router();
 const { getClients, createClients, updateClientsbyId, deleteClientbyId, getClientsbyId } = require('../../models/client.model');
 
 
-
-
 router.get('/', async (req, res) => {
 
 
