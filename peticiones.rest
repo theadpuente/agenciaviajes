@@ -1,0 +1,51 @@
+@hostname = http://localhost
+@port = 3000
+@url-local = {{hostname}}:{{port}}
+
+
+### 
+GET {{url-local}}/api/clients
+
+
+###
+POST {{url-local}}/api/clients
+Content-Type: application/json
+
+{
+    "nombre": "Jorge",
+    "apellidos": "López",
+    "direccion": "965 Shopko Lane",
+    "email": "ramsdvsdo4@mail.com",
+    "telefono": "887678877",
+    "fecha_nacimiento": "1994-10-13",
+    "dni": "52ec01763t"
+}
+
+###
+PUT {{url-local}}/api/clients/4
+Content-Type: application/json
+
+{
+    "nombre": " Peticion Put ",
+    "apellidos": "sknkcs",
+    "direccion": "9oo65 Shopko Lane",
+    "email": "kncksdcsdc@mail.com",
+    "telefono": "887678877",
+    "fecha_nacimiento": "1994-10-13",
+    "dni": "9878877J"
+}
+
+###
+DELETE {{url-local}}/api/clients/5
+
+// Hoteles
+
+###
+GET {{url-local}}/api/hotels
+###
+GET {{url-local}}/api/trips
+
+
+// Viajes
+
+
