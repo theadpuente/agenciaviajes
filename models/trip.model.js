@@ -17,7 +17,11 @@ const createTrip = ({ fecha_salida, fecha_vuelta, ident_ida, ident_vuelta, hotel
 
 };
 
+const TripClient = ({ clientes_id, viajes_id }) => {
 
+    return db.query(' insert into clientes_has_viajes (clientes_id, viajes_id) values (?, ?)', [clientes_id, viajes_id])
+
+};
 
 const updateTripbyId = (tripId, { fecha_salida, fecha_vuelta, ident_ida, ident_vuelta, hoteles_id }) => {
 
@@ -40,7 +44,7 @@ const deleteTripbyId = (tripId) => {
 
 module.exports = {
 
-    getTrips, getTripsbyId, createTrip, updateTripbyId, deleteTripbyId
+    getTrips, getTripsbyId, createTrip, updateTripbyId, deleteTripbyId, TripClient
 
 }
 
